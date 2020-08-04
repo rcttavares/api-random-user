@@ -1,0 +1,16 @@
+<nav class="sidenav">
+  <div>
+    <a class="sidenav__a" title="Todos" [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+      <mat-icon class="sidenav__icon">select_all</mat-icon>
+      <p class="sidenav__p">Todos</p>
+    </a>
+    <a class="sidenav__a" title="Atendidos" [routerLink]="['/attended']" routerLinkActive="active">
+      <mat-icon class="sidenav__icon">done_all</mat-icon>
+      <p class="sidenav__p">Atendidos</p>
+    </a>
+    <a class="sidenav__a" title="Lixeira" [routerLink]="['/trash']" routerLinkActive="active">
+      <mat-icon class="sidenav__icon">delete_sweep</mat-icon>
+      <p class="sidenav__p">Lixeira</p>
+    </a>
+  </div>
+</nav>

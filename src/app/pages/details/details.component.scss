@@ -1,0 +1,125 @@
+@import '../../../assets/sass/index.scss';
+
+.header {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  width: 100%;
+  background-color: $main-color;
+  height: 18rem;
+
+  &__content {
+    display: flex;
+    box-sizing: border-box;
+    padding: 0 16px;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    white-space: nowrap;
+    height: 64px;
+    position: absolute;
+
+    &--icon {
+      color: $white-color;
+      font-size: 40px;
+      width: auto;
+      height: auto;
+      cursor: pointer;
+    }
+  }
+}
+
+.card {
+  margin: 4rem 20rem;
+  text-align: center;
+  background-color: $white-color;
+  box-shadow: 0px 0px 20px -10px rgba(0, 0, 0, 0.75);
+  border-radius: 5px;
+  padding: 0;
+
+  &__header {
+    background-color: $light-gray-color;
+    height: 140px;
+    margin-bottom: 120px;
+    border-bottom: 1px solid rgba(0,0,0,.25);
+
+    &--img {
+      padding: 30px;
+
+      img {
+        width: 200px;
+        height: auto;
+        border-radius: 50%;
+        border: 1px solid rgba(0,0,0,.25);
+        padding: 5px;
+        background: $white-color;
+      }
+    }
+  }
+
+  &__content {
+    padding: 0 5px;
+
+    &--subtitle {
+      font-size: 18px;
+      color: $gray-color;
+    }
+
+    &--title {
+      font-size: 28px;
+      color: $black-color;
+    }
+  }
+
+  &__footer {
+    padding: 20px;
+    margin-bottom: 18px !important;
+
+    &--icon {
+      color: $gray-color;
+      font-size: 40px;
+      width: auto;
+      height: auto;
+      cursor: pointer;
+      margin: 15px;
+      transition: all .25s ease-out;
+
+      &:hover {
+        color: $read-color;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-sm) {
+  .card {
+    margin: 6rem 1rem;
+
+    &__content {
+      &--subtitle {
+        font-size: 14px;
+      }
+
+      &--title {
+        font-size: 24px;
+      }
+    }
+
+    &__footer {
+      padding-left: 0;
+      padding-right: 0;
+
+      &--icon {
+        font-size: 32px;
+        margin: 6px;
+      }
+    }
+  }
+}
+
+@media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
+  .card {
+    margin: 6rem 6rem;
+  }
+}

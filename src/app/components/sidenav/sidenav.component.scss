@@ -1,0 +1,41 @@
+@import '../../../assets/sass/index.scss';
+
+.sidenav {
+  background-color: $white-color;
+  box-shadow: 0px 0px 20px -10px rgba(0, 0, 0, 0.75);
+  height: 100%;
+
+  a.active {
+    text-decoration: none;
+    background-color: $light-gray-color;
+  }
+
+  &__a {
+    display: flex;
+    width: 100%;
+    line-height: 30px;
+    padding: 10px 20px;
+    text-decoration: none;
+
+    &:hover {
+      background-color: $light-gray-color;
+    }
+  }
+
+  &__icon {
+    padding-right: 15px;
+    width: auto;
+    color: $read-color;
+    position: relative;
+    top: 3px;
+  }
+
+  &__p {
+    margin-bottom: 0;
+    width: 100%;
+    font-size: 18px;
+    color: $read-color;
+    position: relative;
+    top: 1px;
+  }
+}

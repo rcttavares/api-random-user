@@ -1,0 +1,65 @@
+@import '../../../assets/sass/index.scss';
+
+.toolbar {
+  background-color: $main-color;
+  position: relative;
+  box-shadow: 0px 4px 20px -10px rgba(0, 0, 0, 0.75);
+
+  &__span {
+    color: $white-color;
+    font-size: 36px;
+    font-weight: bold;
+  }
+
+  &__group {
+    margin: 0 auto;
+    position: relative;
+    left: -10px;
+
+    &--icon {
+      position: relative;
+      left: 34px;
+      top: 6px;
+      color: $read-color;
+    }
+
+    &--input {
+      width: 40rem;
+      border-radius: 20px;
+      padding-left: 40px;
+      padding-right: 40px;
+
+      &:focus {
+        outline: 0;
+      }
+    }
+  }
+
+  &__icon {
+    color: $white-color;
+    font-size: 40px;
+    width: auto;
+    height: auto;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: $breakpoint-sm) {
+  .toolbar {
+    &__group {
+      &--icon, &--input {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
+  .toolbar {
+    &__group {
+      &--input {
+        width: 30rem;
+      }
+    }
+  }
+}

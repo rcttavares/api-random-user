@@ -1,0 +1,10 @@
+<mat-toolbar class="toolbar">
+  <mat-toolbar-row>
+    <span class="toolbar__span" [routerLink]="['/']" [ngStyle]="{'cursor': 'pointer'}">{{ company }}</span>
+    <div class="toolbar__group">
+      <mat-icon class="toolbar__group--icon">search</mat-icon>
+      <input type="text" class="toolbar__group--input" placeholder="Buscar">
+    </div>
+    <mat-icon class="toolbar__icon">account_circle</mat-icon>
+  </mat-toolbar-row>
+</mat-toolbar>

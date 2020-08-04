@@ -1,0 +1,49 @@
+<div class="header">
+  <div class="header__content">
+    <mat-icon class="header__content--icon" [routerLink]="['/']">navigate_before</mat-icon>
+  </div>
+
+  <mat-card class="card">
+    <div class="card__header">
+      <div class="card__header--img">
+        <img [src]="randomUser.largePicture" />
+      </div>
+    </div>
+
+    <div class="card__content">
+      <div *ngIf="selectedItem == 'fullName'">
+        <div class="card__content--subtitle">Hi, My name is</div>
+        <div class="card__content--title">{{ randomUser.fullName }}</div>
+      </div>
+      <div *ngIf="selectedItem == 'email'">
+        <div class="card__content--subtitle">My email address is</div>
+        <div class="card__content--title">{{ randomUser.email }}</div>
+      </div>
+      <div *ngIf="selectedItem == 'birth'">
+        <div class="card__content--subtitle">My birthday is</div>
+        <div class="card__content--title">{{ randomUser.birth | date: "dd/MM/yyyy" }}</div>
+      </div>
+      <div *ngIf="selectedItem == 'address'">
+        <div class="card__content--subtitle">My address is</div>
+        <div class="card__content--title">{{ randomUser.address }}</div>
+      </div>
+      <div *ngIf="selectedItem == 'phone'">
+        <div class="card__content--subtitle">My phone number is</div>
+        <div class="card__content--title">{{ randomUser.phone }}</div>
+      </div>
+      <div *ngIf="selectedItem == 'password'">
+        <div class="card__content--subtitle">My password is</div>
+        <div class="card__content--title">{{ randomUser.password }}</div>
+      </div>
+    </div>
+
+    <div class="card__footer">
+      <mat-icon class="card__footer--icon" (mouseenter)="hover('fullName')">person</mat-icon>
+      <mat-icon class="card__footer--icon" (mouseenter)="hover('email')">mail</mat-icon>
+      <mat-icon class="card__footer--icon" (mouseenter)="hover('birth')">today</mat-icon>
+      <mat-icon class="card__footer--icon" (mouseenter)="hover('address')">location_on</mat-icon>
+      <mat-icon class="card__footer--icon" (mouseenter)="hover('phone')">phone_in_talk</mat-icon>
+      <mat-icon class="card__footer--icon" (mouseenter)="hover('password')">vpn_key</mat-icon>
+    </div>
+  </mat-card>
+</div>

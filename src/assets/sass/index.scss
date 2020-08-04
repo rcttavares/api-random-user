@@ -1,0 +1,34 @@
+// Abstracts
+@import '../sass/breakpoints';
+@import '../sass/colors';
+
+.grid {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+  "header header"
+  "nav content";
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+
+  @media (max-width: $breakpoint-sm) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+    "header"
+    "nav"
+    "content";
+    height: 0;
+  }
+}
+
+app-toolbar {
+  grid-area: header;
+}
+
+app-sidenav {
+  grid-area: nav;
+}
